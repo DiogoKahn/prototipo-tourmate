@@ -6,26 +6,37 @@
 */
 
 /*--------------------------------------------------------------
-# General
+# General e principais
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  background: color #424246;;
+  flex: 1;
 }
 
-a {
-  color: #061551;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #854dff;
-  text-decoration: none;
+.main{
+  background-color: #424246;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+
+.form-control{
+  background-color:#fff;
+  
+  
+}
+.form_wrapper .botão{
+  background-color: #008000;
+  
+  color: #000000;
+}
+.footer{
+  background-color: #424246;
+  height: 200px;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -102,34 +113,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-  background: #fff;
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 20px 0;
-}
-#header.header-scrolled {
-  padding: 12px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-#header .logo {
-  font-size: 26px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-#header .logo a {
-  color: #0b2341;
-}
-#header .logo img {
-  max-height: 40px;
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -482,7 +465,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f6f9fd;
+  background-color: #424246;
 }
 
 .section-title {
@@ -504,7 +487,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #f38b74;
+  background: #e7772d;
   margin: 4px 10px;
 }
 .section-title p {
@@ -514,9 +497,12 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0f2f57;
+  color: #e7772d;
 }
 
+.section-title h3{
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -1330,12 +1316,23 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.col-lg-12{
+  background-color: linear-gradient(to right, #00FFFF, #008000);
+        
+}
+.col-lg-12 h3{
+  color: #000000;
+}
+
+
+
+
 .contact .info-box {
   color: #0b2341;
   text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;
-  background: #fff;
+
 }
 .contact .info-box i {
   font-size: 32px;
@@ -1357,9 +1354,9 @@ section {
   margin-bottom: 0;
 }
 .contact .php-email-form {
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  
   padding: 30px;
-  background: #fff;
+  background: linear-gradient(to right, #00FFFF, #008000);
 }
 .contact .php-email-form .error-message {
   display: none;
@@ -1414,12 +1411,13 @@ section {
   padding: 12px 15px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #061551;
+  
   border: 0;
   padding: 10px 30px;
   border-radius: 4px;
-  color: #fff;
+  
   transition: 0.4s;
+  
 }
 .contact .php-email-form button[type=submit]:hover {
   background: #ef6445;
