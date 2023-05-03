@@ -39,8 +39,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: #e7772d;
+  padding: 10px;
+  
 }
 
 .team {
@@ -50,15 +51,47 @@ footer {
 }
 
 .team-member img {
-  margin-right: 100px;
+  margin-right: 10px;
   width: 100px;
   height: 100px;
-  border-radius: 40%;
+  border-radius: 45%;
+  align-items: left;
 }
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+}
+
+.team-member {
+  width: 33.33%;
+}
+
+.contact {
+  order: 1;
+}
+
+.team-member h4, .team-member p {
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
 
 .col-md-6 h3{
 margin-top: 1rem;
+margin-bottom: 1.5rem;
+
 }
+
+.col-md-6{
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  
+}
+
 .botão {
   background-color: #008000;
   color: #ffffff;
