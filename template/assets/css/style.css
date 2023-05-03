@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer{
   background-color: #424246;
-  height: 200px;
+  height: 10px;
 }
 
 .header{
@@ -81,8 +81,8 @@ footer {
 
 
 .col-md-6 h3{
-margin-top: 1rem;
-margin-bottom: 1.5rem;
+margin-top: 0.5rem;
+margin-bottom: 2.3rem;
 
 }
 
@@ -92,8 +92,15 @@ margin-bottom: 1.5rem;
   
 }
 
+.direitos{
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 .botão {
-  background-color: #008000;
+  background-color: #1b507a;
   color: #ffffff;
   padding: 10px 20px;
   border: none;
@@ -106,6 +113,12 @@ margin-bottom: 1.5rem;
 .botão:hover {
   background-color: orange;
   color: #000000;
+}
+
+.japetech{
+  height: 100px;
+  margin-left: 2rem;
+  border-radius: 1rem;
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -284,8 +297,8 @@ section {
 }
 .section-title p {
   margin: 0;
-  margin: 0;
-  font-size: 36px;
+  margin-bottom: -1rem;
+  font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -295,6 +308,7 @@ section {
 .section-title h3{
   color: #fff;
   margin-bottom: 1rem;
+  font-size: 1.7rem;
 }
 
 
