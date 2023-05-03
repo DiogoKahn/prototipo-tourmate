@@ -26,8 +26,16 @@ def get_preferencias():
     senha = request.form.get('senha')
 
     clima = request.form.get('Clima')
+    if clima.lower() == "inverno":
+        clima = "Winter"
+    elif clima.lower() == "verão":
+        clima = "Summer"
     estado = request.form.get('Estado')
     tipo_viagem = request.form.get('tipo_viagem')
+    if tipo_viagem.lower() == "turismo":
+        tipo_viagem = "tourist"
+    elif tipo_viagem.lower() == "religioso":
+        tipo_viagem = "religious"
 
     # string = 'Nome: '+ nome+ '| Email: '+ email+ '\n'+ 'clima: '+ clima + '| região: '+ regiao+ '| local: '+ local+ '| Tipo de Viagem: '+tipo_viagem
     
@@ -58,7 +66,7 @@ def recomendacao(prefs):
                     "content": "You are travel guide assistant that responds all travel recomendation in a python dictonary with each key being a place or city and its contents being a list of strings of recomendations of things to do in that place or city. Respond with code only."})
     
     messages.append({"role": "user", "content": 
-                    f"Give me travel recomendations in {prefs['Estado']} state in {prefs['Clima']} with {prefs['tipo_viagem']} porposes."})
+                    f"Give me travel recomendations in {prefs['Estado']} state in {prefs['Clima']} with {prefs['tipo_viagem']} porposes. Translate your response to portuguese."})
     data = {"model": "gpt-3.5-turbo", "messages": messages}
     response = requests.post(url, headers=headers, json=data)
     reply = response.json()["choices"][0]["message"]["content"]
