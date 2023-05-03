@@ -33,6 +33,8 @@ def get_preferencias():
     
     prefs = {"Clima": clima, "Estado": estado, "tipo_viagem": tipo_viagem}
 
+    print(prefs)
+
     return prefs
 
 ## Renderiza o resultado predito pelo modelo ML na Webpage
