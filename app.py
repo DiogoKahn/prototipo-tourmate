@@ -45,17 +45,6 @@ def get_preferencias():
 
     return prefs
 
-## Renderiza o resultado predito pelo modelo ML na Webpage
-@app.route('/send', methods=['POST'])
-def show_data():
-
-    prefs = get_preferencias()
-    
-    result = recomendacao(prefs)
-    
-    return render_template('result.html', result=result)
-
-@app.route('/results',methods=['POST'])
 def recomendacao(prefs):
     OPENAI_API_KEY = "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"
     url = "https://api.openai.com/v1/chat/completions"
@@ -98,6 +87,17 @@ def recomendacao(prefs):
     #         }
 
     return resp
+
+## Renderiza o resultado predito pelo modelo ML na Webpage
+@app.route('/send', methods=['POST'])
+def show_data():
+
+    prefs = get_preferencias()
+    
+    result = recomendacao(prefs)
+    
+    return render_template('result.html', result=result)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
