@@ -10,12 +10,12 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background: color #424246;;
+  background-color :#727272;
   flex: 1;
 }
 
 .main{
-  background-color: #424246;
+  background-color: #727272;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -100,7 +100,7 @@ margin-bottom: 2.3rem;
 }
 
 .botão {
-  background-color: #1b507a;
+  background-color: #2196f3;
   color: #ffffff;
   padding: 10px 20px;
   border: none;
@@ -269,12 +269,13 @@ section {
 }
 
 .section-bg {
-  background-color: #424246;
+  background-color: #727272;
 }
 
 .section-title p{
   padding-bottom: 0,625rem;
-  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+ 
 }
 .section-title h2 {
   font-size: 14px;
@@ -394,14 +395,14 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 .contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 0;
+  border-radius: 1;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
   
 }
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #000000;
+  border-color: orange;
 }
 .contact .php-email-form input {
   padding: 10px 15px;
