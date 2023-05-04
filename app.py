@@ -26,26 +26,25 @@ def get_preferencias():
     senha = request.form.get('senha')
 
     clima = request.form.get('Clima')
+    if clima.lower() == "inverno":
+        clima = "Winter"
+    elif clima.lower() == "verão":
+        clima = "Summer"
     estado = request.form.get('Estado')
     tipo_viagem = request.form.get('tipo_viagem')
+    if tipo_viagem.lower() == "turismo":
+        tipo_viagem = "tourist"
+    elif tipo_viagem.lower() == "religioso":
+        tipo_viagem = "religious"
 
     # string = 'Nome: '+ nome+ '| Email: '+ email+ '\n'+ 'clima: '+ clima + '| região: '+ regiao+ '| local: '+ local+ '| Tipo de Viagem: '+tipo_viagem
     
     prefs = {"Clima": clima, "Estado": estado, "tipo_viagem": tipo_viagem}
 
+    print(prefs)
+
     return prefs
 
-## Renderiza o resultado predito pelo modelo ML na Webpage
-@app.route('/send', methods=['POST'])
-def show_data():
-
-    prefs = get_preferencias()
-    
-    result = recomendacao(prefs)
-    
-    return render_template('result.html', result=result)
-
-@app.route('/results',methods=['POST'])
 def recomendacao(prefs):
     # OPENAI_API_KEY = "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"
     # url = "https://api.openai.com/v1/chat/completions"
@@ -88,6 +87,17 @@ def recomendacao(prefs):
             }
 
     return resp
+
+## Renderiza o resultado predito pelo modelo ML na Webpage
+@app.route('/send', methods=['POST'])
+def show_data():
+
+    prefs = get_preferencias()
+    
+    result = recomendacao(prefs)
+    
+    return render_template('result.html', result=result)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
