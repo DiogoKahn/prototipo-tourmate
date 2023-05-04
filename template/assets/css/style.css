@@ -356,3 +356,38 @@ section {
   }
 }
 
+/*------ Header
+------------------------------------*/
+header {
+  background-color: #061551;
+  box-shadow: 1px 2px 4px #e7772d;
+}
+
+.logo {
+  display: flex;
+  padding: 1rem;
+  height: 6rem;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #e7772d;
+
+}
+
+.logo p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.logo img{
+height: 4.5rem;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+margin-left: 55rem;
+}
+
