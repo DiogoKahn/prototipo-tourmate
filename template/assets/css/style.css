@@ -115,8 +115,8 @@ margin-bottom: 2.3rem;
   color: #000000;
 }
 
-.japetech{
-  height: 100px;
+.japetech-logo{
+  height: 8rem;
   margin-left: 2rem;
   border-radius: 1rem;
 }
@@ -166,16 +166,84 @@ margin-bottom: 2.3rem;
   }
 }
 /*--------------------------------------------------------------
-# Container
+# Container - da página de resultado
 --------------------------------------------------------------*/
+.result-background{
+  background-color: #fff;
+}
 
 .container-result {
-  background-color: #fff;
+  background-color: #51c87b;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin: 50px auto;
   max-width: 800px;
+  
+}
+
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 40px;
+  margin-top: 1rem;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 10px #e7772d;
+}
+
+.card h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #777;
+  text-align: left;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+  background-color: #666;
+  cursor: pointer;
+}
+
+.back-to-top i {
+  font-size: 24px;
 }
 
 /*--------------------------------------------------------------
