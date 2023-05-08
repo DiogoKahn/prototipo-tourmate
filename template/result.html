@@ -48,23 +48,7 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact result-background">
         <div class="container-result" data-aos="fade-up">
-            <!--
-                <br/><br/><br/>
-                <div class="section-title">
-                    <h2>Recomendações</h2>
-                    <p>RESULTADO</p>
-                </div>
-    
-                <div class="row">
-    
-                    <div class="col-lg-12">
-                        <br>
-                        <b class="prediction"><h3><b><u> {{ result }} </u></b></h3></b>
-                        </div>
-                    </div>
-    
-                </div>
-            -->
+          
             {% for city, result in result.items() %}
                 <div class="card">
                     <h2>{{ city }}</h2>

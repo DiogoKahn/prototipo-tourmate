@@ -443,7 +443,7 @@ header {
 }
 
 .logo h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-right: 0.5rem;
   color: #e7772d;
@@ -452,9 +452,9 @@ header {
 }
 
 .logo p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ffffff;
-  margin-top: 1.4rem;
+  margin-top: 1.5rem;
 }
 
 .logo img{
@@ -462,6 +462,6 @@ height: 4.5rem;
 display: flex;
 flex-direction: row-reverse;
 align-items: center;
-margin-left: 55rem;
+margin-left: 68rem;
 }
 
