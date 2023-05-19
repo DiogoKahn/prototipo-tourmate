@@ -46,7 +46,7 @@ def get_preferencias():
     return prefs
 
 def recomendacao(prefs):
-    OPENAI_API_KEY = "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"
+    OPENAI_API_KEY = "API-KEY"
     url = "https://api.openai.com/v1/chat/completions"
     headers = {"Content-Type": "application/json",
             "Authorization": f"Bearer {OPENAI_API_KEY}"}
@@ -55,7 +55,7 @@ def recomendacao(prefs):
                     "content": "You are travel guide assistant that responds all travel recomendation in a python dictonary with each key being a place or city and its contents being a list of strings of recomendations of things to do in that place or city. Respond with code only."})
     
     messages.append({"role": "user", "content": 
-                    f"Give me travel recomendations in {prefs['Estado']} state in {prefs['Clima']} with {prefs['tipo_viagem']} porposes. Translate your response to portuguese."})
+                    f"Give me travel recomendations in {prefs['Estado']} state in {prefs['Clima']} with {prefs['tipo_viagem']} porposes. Translate the text to portuguese."})
     data = {"model": "gpt-3.5-turbo", "messages": messages}
     response = requests.post(url, headers=headers, json=data)
     reply = response.json()["choices"][0]["message"]["content"]
@@ -66,6 +66,7 @@ def recomendacao(prefs):
 
     resp = eval(resp)
 
+    # Dados Mocados
     # resp = {'São Paulo': 
     #         ['Visit the São Paulo Museum of Art (MASP) and see works by famous artists like Van Gogh, Picasso and Monet.',
     #          'Explore the trendy Vila Madalena neighborhood, known for its street art, restaurants and nightlife.',
