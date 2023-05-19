@@ -5,10 +5,6 @@ from flask import Flask, render_template, request
 # Ajuste das pastas de template e assets
 app = Flask(__name__, template_folder='template', static_folder='template/assets')
 
-# Import do modelo já treinado e salvo (essa parte foi feita no jupyter notebook)
-# modelo_pipeline = pickle.load(open('./models/models.pkl', 'rb'))
-
-
 # Pagina principal
 @app.route('/')
 def home():
@@ -37,11 +33,7 @@ def get_preferencias():
     elif tipo_viagem.lower() == "religioso":
         tipo_viagem = "religious"
 
-    # string = 'Nome: '+ nome+ '| Email: '+ email+ '\n'+ 'clima: '+ clima + '| região: '+ regiao+ '| local: '+ local+ '| Tipo de Viagem: '+tipo_viagem
-    
     prefs = {"Clima": clima, "Estado": estado, "tipo_viagem": tipo_viagem}
-
-    print(prefs)
 
     return prefs
 
@@ -52,10 +44,15 @@ def recomendacao(prefs):
             "Authorization": f"Bearer {OPENAI_API_KEY}"}
     messages = []
     messages.append({"role": "system", 
-                    "content": "You are travel guide assistant that responds all travel recomendation in a python dictonary with each key being a place or city and its contents being a list of strings of recomendations of things to do in that place or city. Respond with code only."})
+                    "content": '''You are travel guide assistant that responds all travel recomendation in a python dictonary
+                      with each key being a place or city and its contents being a list of strings of recomendations of things 
+                      to do in that place or city. Respond with code only.'''
+                      })
     
     messages.append({"role": "user", "content": 
+
                     f"Give me travel recomendations in {prefs['Estado']} state in {prefs['Clima']} with {prefs['tipo_viagem']} porposes. Translate the text to portuguese."})
+
     data = {"model": "gpt-3.5-turbo", "messages": messages}
     response = requests.post(url, headers=headers, json=data)
     reply = response.json()["choices"][0]["message"]["content"]
@@ -102,3 +99,5 @@ def show_data():
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
+
+

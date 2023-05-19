@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Classificador de flor com ML</title>
+    <title>Tela de Resultado</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -43,28 +43,12 @@
 
 
 
-<main id="main">
+<main id="main-result">
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-        <div class="container" data-aos="fade-up">
-            <!--
-                <br/><br/><br/>
-                <div class="section-title">
-                    <h2>Recomendações</h2>
-                    <p>RESULTADO</p>
-                </div>
-    
-                <div class="row">
-    
-                    <div class="col-lg-12">
-                        <br>
-                        <b class="prediction"><h3><b><u> {{ result }} </u></b></h3></b>
-                        </div>
-                    </div>
-    
-                </div>
-            -->
+    <section id="contact" class="contact result-background">
+        <div class="container-result" data-aos="fade-up">
+          
             {% for city, result in result.items() %}
                 <div class="card">
                     <h2>{{ city }}</h2>
